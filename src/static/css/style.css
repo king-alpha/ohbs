@@ -1,0 +1,33 @@
+#now-selling.nav-bar-wrapper:first-child {
+  background: url('../../assets/images/img1.jpg');
+}
+
+#landing-page.nav-bar-wrapper:first-child {
+  background: url('../../assets/images/img6.jpg');
+}
+
+#services.nav-bar-wrapper:first-child {
+  background: url('../../assets/images/services.png');
+  background-position: top !important;
+}
+
+#property-description.nav-bar-wrapper:first-child {
+  background: url('../../assets/images/img2.jpg');
+}
+
+#services.nav-bar-wrapper {
+  height: 490px;
+}
+
+#now-selling.nav-bar-wrapper:first-child,
+#landing-page.nav-bar-wrapper:first-child,
+#services.nav-bar-wrapper:first-child,
+#property-description.nav-bar-wrapper:first-child {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav-bar-wrapper {
+  height: 600px;
+}

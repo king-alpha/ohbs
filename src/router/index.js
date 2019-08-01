@@ -20,6 +20,10 @@ export default new Router({
     {
       path: '/property-description',
       component: require('@/components/PropertyDescription').default
+    },
+    {
+      path: '/about',
+      component: require('@/components/About').default
     }
   ],
   mode: 'history'

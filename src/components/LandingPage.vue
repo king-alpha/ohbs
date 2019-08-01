@@ -7,14 +7,14 @@
         <div class="service">
           <img src="@/assets/images/home.png" alt="call-center" />
           <div class="details">
-            <label>Real estate management and agency</label>
+            <label>real estate management and agency</label>
             <div class="readmore">Read More</div>
           </div>
         </div>
         <div class="service">
           <img src="@/assets/images/goal.png" alt="call-center" />
           <div class="details">
-            <label>Business Development</label>
+            <label>business Development</label>
             <div class="readmore">Read More</div>
           </div>
         </div>
@@ -92,6 +92,7 @@ h2 {
 
 .details label {
   color: blue;
+  text-transform: capitalize;
 }
 
 .service-group {
@@ -120,7 +121,7 @@ h2 {
 }
 
 .service img {
-  width: 100px;
+  width: 125px;
 }
 
 #landing-page-recent-blog {

@@ -22,7 +22,7 @@
         </select>
       </div>
       <div class="filter">
-        <button>search</button>
+        <sui-button positive>search</sui-button>
       </div>
     </form>
   </div>
@@ -38,7 +38,7 @@ export default {
 #search-wrapper {
   max-width: 40%;
   height: 80px;
-  margin: 37% auto;
+  margin: 36% auto;
 }
 
 #filters {
@@ -65,5 +65,31 @@ export default {
 
 .filter:last-of-type {
   align-self: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+  #search-wrapper {
+    margin-top: 20%;
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #search-wrapper {
+    margin-top: 35% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #search-wrapper {
+    margin-top: 30%;
+  }
+
+  #filters {
+    flex-direction: column;
+  }
+
+  .filter:last-of-type {
+    align-self: center;
+  }
 }
 </style>

@@ -99,10 +99,7 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.service-group:first-child {
-  margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .service {
@@ -131,5 +128,17 @@ h2 {
 #landing-page-recent-blog h2 {
   text-transform: capitalize;
   font-style: italic;
+}
+
+@media only screen and (max-width: 425px) {
+  .service {
+    text-align: center;
+    width: 425px;
+    margin: 30px auto;
+  }
+
+  .service-group:first-child {
+    margin-bottom: 0;
+  }
 }
 </style>

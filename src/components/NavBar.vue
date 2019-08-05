@@ -2,28 +2,24 @@
   <div id="navbar">
     <div class="links">
       <h2 id="brand">
-        <router-link to="/">OHBS</router-link>
+        <i class="user icon"></i>
+        <!-- <router-link to="/">OHBS</router-link> -->
       </h2>
-      <div class="link">
-        <router-link to="/">Home</router-link>
-      </div>
-      <div class="link">
-        <router-link to="/services">Services</router-link>
-      </div>
-      <div class="link active">
-        <router-link to="/now-selling">now selling</router-link>
-      </div>
-      <div class="link">
-        <router-link to="/about">About</router-link>
-      </div>
-      <div class="link">
-        <router-link to="/blog">blog</router-link>
+      <div
+        class="link"
+        :class="{active: current_route === route.to}"
+        v-for="(route, index) in routes"
+        :key="index"
+      >
+        <router-link :to="route.to">{{route.name}}</router-link>
       </div>
       <div class="link">
         <i class="large user circle icon"></i>
       </div>
     </div>
-    <search v-if="show_search"></search>
+    <div id="nav-search-wrapper">
+      <search v-if="show_search"></search>
+    </div>
     <div id="slogan" v-if="show_slogan">
       <h2>Orion heights business solutions</h2>
       <div>
@@ -42,8 +38,37 @@ import Search from "./Search";
 
 export default {
   name: "nav-bar",
+  data() {
+    return {
+      routes: [
+        {
+          to: "/",
+          name: "Home"
+        },
+        {
+          to: "/services",
+          name: "Services"
+        },
+        {
+          to: "/now-selling",
+          name: "now selling"
+        },
+        {
+          to: "/about",
+          name: "About"
+        },
+        {
+          to: "/blog",
+          name: "blog"
+        }
+      ]
+    };
+  },
   components: { Search },
   computed: {
+    current_route() {
+      return this.$route.path;
+    },
     show_search() {
       return this.$router.history.current.path === "/now-selling";
     },
@@ -59,6 +84,8 @@ export default {
 
 <style scoped>
 #navbar {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   color: #fff;
   padding: 5px;
@@ -66,11 +93,13 @@ export default {
 
 #slogan,
 #property-details {
-  display: flex;
+  margin: auto;
+  text-align: center;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   height: inherit;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 #slogan h2,
@@ -96,20 +125,20 @@ a {
 
 #brand {
   margin-right: auto;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 8px;
   margin-right: 80px;
   justify-content: center;
 }
 
 .link {
-  margin: 10px;
   text-transform: uppercase;
+  margin: 10px;
 }
 
 .link:last-of-type {
@@ -120,7 +149,16 @@ a {
 }
 
 .active {
-  margin-bottom: 20px;
+  margin: 10px 10px 30px;
+  border-bottom: 2px solid #fff;
+}
+
+@media only screen and (max-width: 425px) {
+  #slogan h2,
+  #property-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
 }
 </style>
 

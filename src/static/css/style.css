@@ -16,7 +16,7 @@
 }
 
 #services.nav-bar-wrapper {
-  height: 490px;
+  height: 480px;
 }
 
 #now-selling.nav-bar-wrapper:first-child,
@@ -29,5 +29,40 @@
 }
 
 .nav-bar-wrapper {
-  height: 600px;
+  background-color: green;
+  height: calc(100vh - 100px);
+  /* height: 600px; */
+}
+
+/* media Queries */
+@media (max-width: 900px) {
+  .nav-bar-wrapper {
+    height: calc(100vh - 65vh);
+  }
+
+  .links > div {
+    display: none !important;
+  }
+
+  #services.nav-bar-wrapper {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #services.nav-bar-wrapper {
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #services.nav-bar-wrapper {
+    height: 120px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1085px) {
+  .nav-bar-wrapper {
+    height: calc(100vh - 355px);
+  }
 }

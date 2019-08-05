@@ -92,7 +92,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #cards-wrapper {
   background-color: #f3f3f3ec;
 }
@@ -105,6 +105,10 @@ export default {
 
 #cards {
   padding: 18px 50px;
+}
+
+#cards .card {
+  margin-top: 25px !important;
 }
 
 .top.left.attached.label {

@@ -16,8 +16,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #seperator {
   margin-top: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+  #seperator {
+    margin-top: 380px;
+  }
 }
 </style>

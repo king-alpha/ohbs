@@ -5,12 +5,14 @@
       <div id="content">
         <div id="property-details">
           <div id="gallery-wrapper">
-            <img :src="active_image" alt />
+            <img :src="active_image" alt="property image" />
             <div id="gallery">
               <img
+                class="gallery-thumbnails"
                 :class="{active: active_image === image}"
                 @click="set_active_image(image)"
                 :src="image"
+                alt="property image thumbnail"
                 v-for="(image, index) in images"
                 :key="index"
               />
@@ -155,5 +157,28 @@ img {
 #description > div {
   margin-top: 10px;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #property-details,
+  #contact-us {
+    width: 100%;
+  }
+  #contact-us {
+    border: none;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  #gallery img {
+    width: 15%;
+  }
+  #gallery img.active {
+    padding: 5px;
+  }
 }
 </style>

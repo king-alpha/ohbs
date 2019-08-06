@@ -131,6 +131,12 @@ h2 {
   font-style: italic;
 }
 
+@media only screen and (min-width: 426px) {
+  .service-group:first-child {
+    margin-bottom: 50px;
+  }
+}
+
 @media only screen and (max-width: 425px) {
   .service {
     text-align: center;

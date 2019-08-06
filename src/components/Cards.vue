@@ -3,16 +3,18 @@
     <h2 v-if="should_show">New on the Market</h2>
     <div id="cards">
       <div class="ui three stackable cards">
-        <div class="card" v-for="(card, index) in now_selling" :key="index">
+        <div
+          @click="routeTo('/property-description')"
+          class="card"
+          v-for="(card, index) in now_selling"
+          :key="index"
+        >
           <div class="image">
             <img :src="card.img_src" alt="house" />
           </div>
-          <a
-            @click="routeTo('/property-description')"
-            class="ui red top left attached label"
-          >For Sale</a>
+          <a class="ui red top left attached label">For Sale</a>
           <div class="content">
-            <div @click="routeTo('/property-description')" class="header">{{card.title}}</div>
+            <div class="header">{{card.title}}</div>
             <div class="description">
               <i class="map marker alternate icon"></i>
               {{card.description}}
@@ -150,5 +152,11 @@ export default {
 .detail-value {
   font-weight: 600;
   font-size: 1.2em;
+}
+
+@media only screen and (max-width: 425px) {
+  #cards {
+    padding: 18px 15px;
+  }
 }
 </style>

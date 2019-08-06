@@ -46,7 +46,7 @@
     <cards></cards>
     <div id="why-choose-us">
       <h2>Why choose us ?</h2>
-      <label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem enim quo quae rem cum earum aliquam, fugit exercitationem omnis ipsa minus facilis voluptate vel voluptas vitae sapiente dolorum nostrum consectetur!</label>
+      <label>We deliver strategic success by empowering our clients through a comprehensive assessment of their business objectives, identifying and redefining key variables that will facilitate the attainment of market leadership. To survive and grow in business, a superior product or service offering is the key. At Orion Heights Business Solutions, we believe strategy is all about creating distinction by choosing different set of activities to create a unique mix of value. We help our clients achieve market leadership by creating sustainable competitive advantage. Hence, our focus is to deliver value through exhaustive execution of business strategies that guarantee unparalleled outcomes.</label>
     </div>
     <div id="landing-page-recent-blog">
       <h2>Recent Blog</h2>
@@ -75,7 +75,7 @@ export default {
 
 #why-choose-us h2,
 #services {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 #why-choose-us label {
@@ -123,6 +123,7 @@ h2 {
 
 #landing-page-recent-blog {
   background-color: #f3f3f3ec;
+  padding: 18px 50px;
 }
 
 #landing-page-recent-blog h2 {
@@ -139,6 +140,10 @@ h2 {
 
   .service-group:first-child {
     margin-bottom: 0;
+  }
+
+  #landing-page-recent-blog {
+    padding: 18px 15px;
   }
 }
 </style>

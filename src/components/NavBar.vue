@@ -2,8 +2,8 @@
   <div id="navbar">
     <div class="links">
       <h2 id="brand">
-        <i class="user icon"></i>
-        <!-- <router-link to="/">OHBS</router-link> -->
+        <!-- <i class="user icon"></i> -->
+        <router-link to="/">OHBS</router-link>
       </h2>
       <div
         class="link"

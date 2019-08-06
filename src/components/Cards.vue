@@ -19,7 +19,7 @@
               <i class="map marker alternate icon"></i>
               {{card.description}}
             </div>
-            <div class="description price">GHC {{card.price}}</div>
+            <div class="description price">$ {{card.price}}</div>
             <div class="details">
               <div class="detail-items">
                 <div class="detail-item">Beds</div>

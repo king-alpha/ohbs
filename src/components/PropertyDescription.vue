@@ -24,8 +24,15 @@
               <div>$300,000</div>
             </div>
             <div id="description">
-              <label>Description</label>
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, beatae. Animi corrupti at quidem impedit, aut dolor exercitationem molestias quibusdam, unde culpa laudantium? Inventore numquam molestiae dolore repellat fugit blanditiis.</div>
+              <label>Features</label>
+              <sui-list bulleted>
+                <sui-list-item>4 Guest Rooms</sui-list-item>
+                <sui-list-item>4 Bed Rooms</sui-list-item>
+                <sui-list-item>2 Kitchens</sui-list-item>
+                <sui-list-item>1 Dining hall</sui-list-item>
+                <sui-list-item>A Basket Ball court</sui-list-item>
+                <sui-list-item>5 Washrooms</sui-list-item>
+              </sui-list>
             </div>
           </div>
         </div>

@@ -40,10 +40,6 @@
     height: calc(100vh - 65vh);
   }
 
-  .links > div {
-    display: none !important;
-  }
-
   #services.nav-bar-wrapper {
     height: 300px;
   }
@@ -61,7 +57,13 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 1085px) {
+@media only screen and (max-width: 360px) {
+  .nav-bar-wrapper {
+    height: calc(100vh - 400px);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 1085px) {
   .nav-bar-wrapper {
     height: calc(100vh - 355px);
   }

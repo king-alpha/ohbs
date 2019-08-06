@@ -2,7 +2,18 @@
   <div id="navbar">
     <div class="links">
       <h2 id="brand">
-        <!-- <i class="user icon"></i> -->
+        <div id="menu ">
+          <sui-dropdown class="icon" icon="bars" button pointing floating>
+            <sui-dropdown-menu>
+              <router-link
+                v-for="(route, index) in routes"
+                :to="route.to"
+                :key="index"
+                tag="sui-dropdown-item"
+              >{{route.name}}</router-link>
+            </sui-dropdown-menu>
+          </sui-dropdown>
+        </div>
         <router-link to="/">OHBS</router-link>
       </h2>
       <div
@@ -40,6 +51,7 @@ export default {
   name: "nav-bar",
   data() {
     return {
+      menu: require("@/assets/images/menu.png"),
       routes: [
         {
           to: "/",
@@ -51,15 +63,11 @@ export default {
         },
         {
           to: "/now-selling",
-          name: "now selling"
+          name: "Now Selling"
         },
         {
           to: "/about",
           name: "About"
-        },
-        {
-          to: "/blog",
-          name: "blog"
         }
       ]
     };
@@ -95,11 +103,6 @@ export default {
 #property-details {
   margin: auto;
   text-align: center;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
-  flex-direction: column; */
 }
 
 #slogan h2,
@@ -126,6 +129,13 @@ a {
 #brand {
   margin-right: auto;
   margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#brand > div:first-of-type {
+  margin-right: 6px;
 }
 
 .links {
@@ -148,9 +158,28 @@ a {
   border-left: 1px solid #fff;
 }
 
-.active {
-  margin: 10px 10px 30px;
-  border-bottom: 2px solid #fff;
+.router-link-exact-active {
+  /* margin: 10px 10px 30px; */
+  /* border-bottom: 2px solid rgb(83, 83, 83) !important; */
+  /* background-color: green !important;
+  margin: 0 !important;
+  padding: 0 !important; */
+}
+
+@media (min-width: 901px) {
+  #brand > div:first-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .links > div {
+    display: none;
+  }
+
+  #brand {
+    margin-left: 3px;
+  }
 }
 
 @media only screen and (max-width: 425px) {

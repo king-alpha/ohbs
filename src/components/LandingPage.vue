@@ -4,41 +4,20 @@
     <h2>services</h2>
     <div id="services">
       <div class="service-group">
-        <div class="service">
-          <img src="@/assets/images/home.png" alt="call-center" />
+        <div class="service" v-for="(service, index) in services_group_1" :key="index">
+          <img :src="service.img_src" alt="call-center" />
           <div class="details">
-            <label>real estate management and agency</label>
-            <div class="readmore">Read More</div>
-          </div>
-        </div>
-        <div class="service">
-          <img src="@/assets/images/goal.png" alt="call-center" />
-          <div class="details">
-            <label>business Development</label>
-            <div class="readmore">Read More</div>
+            <label>{{service.title}}</label>
+            <router-link :to="'/services#' + service.id" tag="div" class="readmore">Read More</router-link>
           </div>
         </div>
       </div>
       <div class="service-group">
-        <div class="service">
-          <img src="@/assets/images/instagram.png" alt="call-center" />
+        <div class="service" v-for="(service, index) in services_group_2" :key="index">
+          <img :src="service.img_src" alt="call-center" />
           <div class="details">
-            <label>brand managemnt and development</label>
-            <div class="readmore">Read More</div>
-          </div>
-        </div>
-        <div class="service">
-          <img src="@/assets/images/growth.png" alt="call-center" />
-          <div class="details">
-            <label>distribution and sales</label>
-            <div class="readmore">Read More</div>
-          </div>
-        </div>
-        <div class="service">
-          <img src="@/assets/images/call-center.png" alt="call-center" />
-          <div class="details">
-            <label>marketing consuling services</label>
-            <div class="readmore">Read More</div>
+            <label>{{service.title}}</label>
+            <router-link :to="'/services#' + service.id" tag="div" class="readmore">Read More</router-link>
           </div>
         </div>
       </div>
@@ -62,6 +41,12 @@ import Cards from "./Cards";
 
 export default {
   name: "landing-page",
+  data() {
+    return {
+      services_group_1: require("@/static/data.js").services.slice(0, 2),
+      services_group_2: require("@/static/data.js").services.slice(2)
+    };
+  },
   components: { NavBar, Cards, RecentBlog }
 };
 </script>

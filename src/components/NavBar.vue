@@ -158,13 +158,8 @@ a {
   border-left: 1px solid #fff;
 }
 
-.router-link-exact-active {
-  /* margin: 10px 10px 30px; */
-  /* border-bottom: 2px solid rgb(83, 83, 83) !important; */
-  /* background-color: green !important;
-  margin: 0 !important;
-  padding: 0 !important; */
-}
+/* .router-link-exact-active {
+} */
 
 @media (min-width: 901px) {
   #brand > div:first-of-type {

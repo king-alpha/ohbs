@@ -86,10 +86,10 @@ export default {
 </script>
 
 <style scoped>
-#property-description-wrapper {
+/* #property-description-wrapper {
   background-color: #000;
-  /* opacity: 0.5; */
-}
+  opacity: 0.5;
+} */
 
 img {
   width: inherit;

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #now-selling.nav-bar-wrapper:first-child {
   background: url('../../assets/images/img1.jpg');
 }
@@ -15,15 +20,27 @@
   background: url('../../assets/images/img2.jpg');
 }
 
+#about.nav-bar-wrapper:first-child {
+  background: url('../../assets/images/people.jpg');
+  background-attachment: fixed;
+  /* background-clip: border-box; */
+}
+
 #services.nav-bar-wrapper {
   height: 480px;
+}
+
+#about.nav-bar-wrapper {
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 #now-selling.nav-bar-wrapper:first-child,
 #landing-page.nav-bar-wrapper:first-child,
 #services.nav-bar-wrapper:first-child,
-#property-description.nav-bar-wrapper:first-child {
-  background-size: 100%;
+#property-description.nav-bar-wrapper:first-child,
+#about.nav-bar-wrapper:first-child {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

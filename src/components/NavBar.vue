@@ -28,16 +28,22 @@
         <i class="large user circle icon"></i>
       </div>
     </div>
-    <div id="nav-search-wrapper">
-      <search v-if="show_search"></search>
+    <div id="about-page-content" v-if="show_if('/about')">
+      <div :id="about.id" v-for="(about, index) in aboutData" :key="index">
+        <h3>{{about.title}}</h3>
+        <div class="content">{{about.content}}</div>
+      </div>
     </div>
-    <div id="slogan" v-if="show_slogan">
+    <div id="nav-search-wrapper">
+      <search v-if="show_if('/now-selling')"></search>
+    </div>
+    <div id="slogan" v-if="show_if('/')">
       <h2>Orion heights business solutions</h2>
       <div>
         <i>delivering startegic success</i>
       </div>
     </div>
-    <div id="property-details" v-if="show_property_details">
+    <div id="property-details" v-if="show_if('/property-description')">
       <h2 id="description">east legon hills, oluwa crescent</h2>
       <h2 id="price">$300,000</h2>
     </div>
@@ -52,45 +58,72 @@ export default {
   data() {
     return {
       menu: require("@/assets/images/menu.png"),
-      routes: [
-        {
-          to: "/",
-          name: "Home"
-        },
-        {
-          to: "/services",
-          name: "Services"
-        },
-        {
-          to: "/now-selling",
-          name: "Now Selling"
-        },
-        {
-          to: "/about",
-          name: "About"
-        }
-      ]
+      routes: require("@/static/data.js").routes,
+      aboutData: require("@/static/data.js").aboutData
     };
   },
   components: { Search },
+  methods: {
+    show_if(route) {
+      return this.$router.history.current.path === route;
+    }
+  },
   computed: {
     current_route() {
       return this.$route.path;
-    },
-    show_search() {
-      return this.$router.history.current.path === "/now-selling";
-    },
-    show_slogan() {
-      return this.$router.history.current.path === "/";
-    },
-    show_property_details() {
-      return this.$router.history.current.path === "/property-description";
     }
   }
 };
 </script>
 
 <style scoped>
+#about-page-content {
+  font-family: Lato;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+#about-page-content > div:nth-child(1)::first-line {
+  color: blue;
+}
+
+#about-page-content > div:nth-child(2)::first-line {
+  color: greenyellow;
+}
+#about-page-content > div:nth-child(3)::first-line {
+  color: red;
+}
+
+#about-page-content > div:nth-child(4)::first-line {
+  color: orange;
+}
+
+#about-page-content > div:nth-child(even) {
+  margin-left: auto;
+}
+
+#about-page-content > div:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+#about-page-content > div {
+  padding: 15px;
+  border-radius: 6px;
+  color: #000;
+  background: #fff;
+  width: 40%;
+}
+
+#about-page-content .content {
+  font-size: 1.3em;
+  word-spacing: 2px;
+  line-height: 1.3;
+}
+
+.active {
+  border-bottom: 2px solid #fff;
+}
+
 #navbar {
   display: flex;
   flex-direction: column;
@@ -177,11 +210,16 @@ a {
   }
 }
 
+/* mobile L */
 @media only screen and (max-width: 425px) {
   #slogan h2,
   #property-details h2 {
     font-size: 1.5em;
     margin-bottom: 30px;
+  }
+
+  #about-page-content > div {
+    width: 100%;
   }
 }
 </style>

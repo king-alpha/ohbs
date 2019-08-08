@@ -77,3 +77,57 @@ export const services = [
       view of the customer.'
   }
 ];
+
+export const routes = [
+  {
+    to: '/',
+    name: 'Home'
+  },
+  {
+    to: '/services',
+    name: 'Services'
+  },
+  {
+    to: '/now-selling',
+    name: 'Now Selling'
+  },
+  {
+    to: '/about',
+    name: 'About'
+  }
+];
+
+export const aboutData = [
+  {
+    title: 'who we are',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At sit, \
+    eius praesentium repudiandae facilis itaque expedita corporis, temporibus \
+    quibusdam autem sequi vel. Non, excepturi! Sint libero mollitia maxime dolorem sunt.',
+    id: 'who-we-are'
+  },
+  {
+    title: 'our mission',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At sit, \
+    eius praesentium repudiandae facilis itaque expedita corporis, temporibus \
+    quibusdam autem sequi vel. Non, excepturi! Sint libero mollitia maxime dolorem sunt.',
+    id: 'our-mission'
+  },
+  {
+    title: 'our story',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At sit, \
+    eius praesentium repudiandae facilis itaque expedita corporis, temporibus \
+    quibusdam autem sequi vel. Non, excepturi! Sint libero mollitia maxime dolorem sunt.',
+    id: 'our-story'
+  },
+  {
+    title: 'what we do',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. At sit, \
+    eius praesentium repudiandae facilis itaque expedita corporis, temporibus \
+    quibusdam autem sequi vel. Non, excepturi! Sint libero mollitia maxime dolorem sunt.',
+    id: 'what-we-do'
+  }
+];

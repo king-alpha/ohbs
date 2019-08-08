@@ -26,8 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.service:nth-child(2),
-.service:nth-child(4) {
+.service:nth-child(even) {
   background-color: #fafafa !important;
 }
 

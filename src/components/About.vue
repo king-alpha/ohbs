@@ -6,7 +6,7 @@
 
 <script>
 import NavBar from "./NavBar";
-import "../static/css/about.css";
+// import "../static/css/about.css";
 
 export default {
   name: "about",

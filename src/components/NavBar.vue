@@ -114,6 +114,10 @@ export default {
   width: 40%;
 }
 
+#about-page-content .content:nth-child(even) {
+  font-style: italic !important;
+}
+
 #about-page-content .content {
   font-size: 1.3em;
   word-spacing: 2px;
@@ -216,6 +220,10 @@ a {
   #property-details h2 {
     font-size: 1.5em;
     margin-bottom: 30px;
+  }
+
+  #about-page-content {
+    margin: 30px 15px;
   }
 
   #about-page-content > div {

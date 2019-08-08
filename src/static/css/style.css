@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background: inherit;
+}
+
 #now-selling.nav-bar-wrapper:first-child {
   background: url('../../assets/images/img1.jpg');
 }
@@ -21,9 +25,9 @@
 }
 
 #about.nav-bar-wrapper:first-child {
-  background: url('../../assets/images/people.jpg');
-  background-attachment: fixed;
-  /* background-clip: border-box; */
+  background: url('../../assets/images/people.jpg') no-repeat center center
+    fixed;
+  overflow-y: auto;
 }
 
 #services.nav-bar-wrapper {
@@ -32,7 +36,6 @@
 
 #about.nav-bar-wrapper {
   height: 100vh;
-  background-attachment: fixed;
 }
 
 #now-selling.nav-bar-wrapper:first-child,
@@ -46,7 +49,6 @@
 }
 
 .nav-bar-wrapper {
-  background-color: green;
   height: calc(100vh - 100px);
   /* height: 600px; */
 }
